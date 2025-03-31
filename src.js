@@ -1,3 +1,30 @@
+const imagePaths = [
+  'images/nomnomer.png',
+  'images/nomnomer_mouthOpen.png',
+  'images/flowers/1.png',
+  'images/flowers/1_outlined.png',
+  'images/flowers/2.png',
+  'images/flowers/2_outlined.png',
+  'images/flowers/3.png',
+  'images/flowers/3_outlined.png',
+  'images/flowers/4.png',
+  'images/flowers/4_outlined.png',
+  'images/flowers/5.png',
+  'images/flowers/5_outlined.png',
+  'images/flowers/bouquet/base.png',
+  'images/flowers/bouquet/1_noStem.png',
+  'images/flowers/bouquet/2_noStem.png',
+  'images/flowers/bouquet/3_noStem.png',
+  'images/flowers/bouquet/4_noStem.png',
+  'images/flowers/bouquet/5_noStem.png',    
+];
+const preloadedImages = [];
+imagePaths.forEach(src => {
+  const img = new Image();
+  img.src = src;
+  preloadedImages.push(img);
+});
+
 let currentStage = 0;
 
 const mainDisplayDiv = document.getElementById('mainDisplayDiv');
