@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #242424;
+    color: #de5283;
+    font-family: 'VT323', cursive;
+    font-size: 1rem;
+}
+button, a {
+    -webkit-tap-highlight-color: transparent;
+    outline: none; /* Removes extra focus outline */
+}
+
+#mainDisplayDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    border: 0.1rem solid #de5283;
+    border-radius: 1rem;
+    width: 50%;
+    height: 20%;
+    min-height: 20rem;
+    padding: 2rem;
+    background-color: #ffddee;
+    margin-bottom: 1rem;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+#mainDisplayText {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    height: 3rem;
+}
+.hidden {
+    opacity: 0 !important;
+}
+
+.field {
+    height: 60% !important;
+    background-color: #388E3C !important;
+    position: relative;
+    overflow: hidden;
+}
+.flower {
+    position: absolute;
+    width: 3rem; /* Adjust based on image size */
+    aspect-ratio: 1 / 1;
+    user-select: none;
+    transition: transform 0.2s;
+}
+.flower2 {
+    position: absolute;
+    width: 3rem; /* Adjust based on image size */
+    aspect-ratio: 1 / 2;
+    user-select: none;
+    transition: transform 0.2s;
+}
+.flower:hover, .flower2:hover {
+    transform: scale(1.2);
+}
+/* Flower fade-in & grow effect */
+@keyframes flowerAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#continueButton {
+    border: 0rem solid #de5283;
+    border-radius: 2rem;
+    width: 10%;
+    min-width: 5rem;
+    text-align: center;
+    background-color: #dc97af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    font-family: 'VT323', cursive;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+#continueButton:hover {
+    cursor: pointer;
+    background-color: #dc97afd6;
+}
+#continueButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+#bouquetBase {
+    width: 20%;
+    animation: bouquetBaseAppear 1s ease-in-out;
+    z-index: 1;
+}
+@keyframes bouquetBaseAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.nomnomer {
+    position: absolute;
+    width: 60%;
+    animation: nomnomerJumpscare 0.2s;
+    transition: all 0.5s ease-in-out;
+}
+@keyframes nomnomerJumpscare {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
