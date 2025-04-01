@@ -107,7 +107,7 @@ button, a {
     animation: bouquetBaseAppear 1s ease-in-out;
     z-index: 1;
 }
-@media (max-width: 600px) {
+@media (max-device-width: 900px) {
     #bouquetBase {
         width: 50%;
     }
