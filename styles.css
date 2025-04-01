@@ -9,6 +9,7 @@ body {
     color: #de5283;
     font-family: 'VT323', cursive;
     font-size: 1rem;
+    position: fixed;
 }
 button, a {
     -webkit-tap-highlight-color: transparent;
@@ -128,6 +129,11 @@ button, a {
     width: 60%;
     animation: nomnomerJumpscare 0.2s;
     transition: all 0.5s ease-in-out;
+}
+@media (max-device-width: 900px) {
+    .nomnomer {
+        width: 150%;
+    }
 }
 @keyframes nomnomerJumpscare {
     from {
